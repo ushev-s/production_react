@@ -18,7 +18,8 @@
     // you can use common js packages like a normal one with import (require() module.export) = common js
     "esModuleInterop": true,
     //if library doesn't support default import this attribute help us to use import React from 'react' instead import * as React from 'react'
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
   },
   "ts-node": {
     "compilerOptions": {
