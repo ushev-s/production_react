@@ -13,9 +13,7 @@
     //for an absolute import
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./src/*"
-      ]
+      "*": ["./src/*"]
     },
     // you can use common js packages like a normal one with import (require() module.export) = common js
     "esModuleInterop": true,
@@ -27,5 +25,12 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/jestEmptyComponent.tsx",
+    "./config/jest/jest.config.ts",
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
 }

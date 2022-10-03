@@ -1,18 +1,25 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
   extends: [
     'plugin:react/recommended',
     'standard-with-typescript',
-    'plugin:i18next/recommended',
+    'plugin:i18next/recommended'
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off'
+      }
+    }
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['tsconfig.json'],
+    project: ['tsconfig.json']
   },
   plugins: ['react', 'i18next'],
   rules: {
@@ -28,28 +35,31 @@ module.exports = {
       {
         multiline: {
           delimiter: 'comma',
-          requireLast: true,
+          requireLast: true
         },
         singleline: {
           delimiter: 'comma',
-          requireLast: true,
+          requireLast: true
         },
         overrides: {
           interface: {
             multiline: {
               delimiter: 'semi',
-              requireLast: true,
-            },
-          },
-        },
-      },
+              requireLast: true
+            }
+          }
+        }
+      }
     ],
     semi: ['error', 'always', { omitLastInOneLineBlock: true }],
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/naming-convention': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      { markupOnly: true, ignoreAttribute: ['data-testid'] }
+    ]
     // 'react/require-default-props': 'off'
-  },
+  }
 };
