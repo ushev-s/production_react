@@ -5,3 +5,4 @@ files/
 ssl/
 logs/
 .env
+/storybook-static
