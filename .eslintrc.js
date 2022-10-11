@@ -21,6 +21,19 @@ module.exports = {
     sourceType: 'module',
     project: ['tsconfig.json']
   },
+  ignorePatterns: [
+    'webpack.config.ts',
+    'buildDevServer.ts',
+    'buildLoaders.ts',
+    'buildPlugins.ts',
+    'buildResolvers.ts',
+    'buildWebpackConfig.ts',
+    'config.ts',
+    'jest.config.ts',
+    'jestEmptyComponent.tsx',
+    'setupTests.ts',
+    'buildCssLoader.ts'
+  ],
   plugins: ['react', 'i18next'],
   rules: {
     'react/react-in-jsx-scope': 'off',
@@ -56,9 +69,11 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/naming-convention': 'off',
+    '@typescript-eslint/consistent-type-assertions': 'off',
+    'react/display-name': 'off',
     'i18next/no-literal-string': [
       'error',
-      { markupOnly: true, ignoreAttribute: ['data-testid'] }
+      { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }
     ]
     // 'react/require-default-props': 'off'
   }

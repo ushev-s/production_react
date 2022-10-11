@@ -26,11 +26,5 @@
       "module": "CommonJS"
     }
   },
-  "include": [
-    "./config/jest/jestEmptyComponent.tsx",
-    "./config/jest/jest.config.ts",
-    "./config/jest/setupTests.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx"
-  ]
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }
