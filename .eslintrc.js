@@ -10,9 +10,10 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
-        'i18next/no-literal-string': 'off'
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off'
       }
     }
   ],
@@ -34,7 +35,7 @@ module.exports = {
     'setupTests.ts',
     'buildCssLoader.ts'
   ],
-  plugins: ['react', 'i18next'],
+  plugins: ['react', 'i18next', 'react-hooks'],
   rules: {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/indent': 'off',
@@ -74,7 +75,9 @@ module.exports = {
     'i18next/no-literal-string': [
       'error',
       { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }
-    ]
+    ],
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error' // Checks effect dependencies
     // 'react/require-default-props': 'off'
   }
 };
