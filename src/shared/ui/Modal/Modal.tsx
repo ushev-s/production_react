@@ -1,3 +1,4 @@
+import { useTheme } from 'app/providers/ThemeProvider';
 import React, { ReactNode, useCallback, useRef, useState, useEffect } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -24,6 +25,7 @@ export const Modal = ({
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing
   };
+  const { theme = '' } = useTheme();
 
   const onContentClick = (e: React.MouseEvent) => {
     e.stopPropagation();
