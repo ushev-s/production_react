@@ -53,7 +53,7 @@ module.exports = {
         },
         singleline: {
           delimiter: 'comma',
-          requireLast: true
+          requireLast: false
         },
         overrides: {
           interface: {
