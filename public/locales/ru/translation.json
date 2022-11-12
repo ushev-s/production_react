@@ -4,5 +4,7 @@
   "An unexpected error occurred": "Произошла непредвиденная ошибка",
   "Reload page": "Обновить страницу",
   "Short Language": "Ru",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Enter username": "Введите логин",
+  "Enter password": "Введите пароль"
 }
